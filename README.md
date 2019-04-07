@@ -1,7 +1,8 @@
 # Semantic Segmentation
-### Introduction
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 Mario Lüder
+
+### Introduction
 
 This project, uses a Fully Convolutional Network (FCN) for semantic segmentation of roads. As input serve images from [Kitti Road dataset](http://www.cvlibs.net/datasets/kitti/eval_road.php) from [here](http://www.cvlibs.net/download.php?file=data_road.zip)
 
