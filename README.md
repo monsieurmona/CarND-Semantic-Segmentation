@@ -17,12 +17,12 @@ In `main.py`, you'll notice that layers 3, 4 and 7 of VGG16 are utilized in crea
 In section 4.3, and further under header "Skip Architectures for Segmentation" and Figure 3, they note these provided for 8x, 16x and 32x upsampling, respectively. Using each of these in their FCN-8s was the most effective architecture they found. 
 
 ### Results
-![segmentation result](runs/kitti_epoch_100_batch_28_keep_0_5_larn_rate_0_0009_augmented/um_000010.png)
+![segmentation result](runs/kitti_epoch_100_batch_28_keep_0_5_larn_rate_0_0009_augmented_github/um_000010.png)
 
 
-![segmentation result](runs/kitti_epoch_100_batch_28_keep_0_5_larn_rate_0_0009_augmented/um_000029.png)
+![segmentation result](runs/kitti_epoch_100_batch_28_keep_0_5_larn_rate_0_0009_augmented_github/um_000029.png)
 
-![segmentation result](runs/kitti_epoch_100_batch_28_keep_0_5_larn_rate_0_0009_augmented/umm_000001.png)
+![segmentation result](runs/kitti_epoch_100_batch_28_keep_0_5_larn_rate_0_0009_augmented_github/umm_000001.png)
 
 
 ## Setup
