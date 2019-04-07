@@ -129,7 +129,8 @@ def test_optimize(optimize):
     layers_output = tf.Variable(tf.zeros(shape))
     correct_label = tf.placeholder(tf.float32, [None, None, None, num_classes])
     learning_rate = tf.placeholder(tf.float32)
-    logits, train_op, cross_entropy_loss = optimize(layers_output, correct_label, learning_rate, num_classes)
+    logits, train_op, cross_entropy_loss, iou, iou_op, metric_reset_ops = optimize(
+        layers_output, correct_label, learning_rate, num_classes)
 
     _assert_tensor_shape(logits, [2*3*4, num_classes], 'Logits')
 
@@ -160,6 +161,15 @@ def test_train_nn(train_nn):
     correct_label = tf.placeholder(tf.float32, name='correct_label')
     keep_prob = tf.placeholder(tf.float32, name='keep_prob')
     learning_rate = tf.placeholder(tf.float32, name='learning_rate')
+
+    iou_op = tf.constant(0)
+    iou = tf.constant(0) # tf.placeholder(tf.float32, name='iou')
+
+    metric_vars = [v for v in tf.local_variables()
+                   if v.name.split('/')[0] == 'iou']
+
+    metric_reset_ops = tf.variables_initializer(metric_vars)
+
     with tf.Session() as sess:
         parameters = {
             'sess': sess,
@@ -171,7 +181,12 @@ def test_train_nn(train_nn):
             'input_image': input_image,
             'correct_label': correct_label,
             'keep_prob': keep_prob,
-            'learning_rate': learning_rate}
+            'learning_rate': learning_rate,
+            'iou_op': iou_op,
+            'iou': iou,
+            'metric_reset_ops': metric_reset_ops
+        }
+
         _prevent_print(train_nn, parameters)
 
 
