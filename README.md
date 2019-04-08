@@ -40,3 +40,7 @@ You may also need [Python Image Library (PIL)](https://pillow.readthedocs.io/) f
 
 ### Dataset
 Download the [Kitti Road dataset](http://www.cvlibs.net/datasets/kitti/eval_road.php) from [here](http://www.cvlibs.net/download.php?file=data_road.zip).  Extract the dataset in the `data` folder.  This will create the folder `data_road` with all the training a test images.
+
+## More Readings
+-   [**A 2017 Guide to Semantic Segmentation with Deep Learning**](http://blog.qure.ai/notes/semantic-segmentation-deep-learning-review)
+-   [**Dense-Segmentation: Pyramid Scene Parsing (PSPnet)**](https://medium.com/@steve101777/dense-segmentation-pyramid-scene-parsing-pspnet-753b1cb6097c)
